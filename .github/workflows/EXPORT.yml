@@ -7,11 +7,6 @@ name: EXPORT
 
 run-name: Export ${{ github.ref_name }} by @${{ github.actor }}
 
-permissions:
-  contents: write
-  id-token: write
-  actions: write
-
 on:
   workflow_dispatch:
     inputs:
@@ -19,6 +14,11 @@ on:
         description: 'Commit message for the exported changes'
         required: true
         type: string
+
+permissions:
+  contents: write
+  id-token: write
+  actions: write
 
 jobs:
   export:
