@@ -40,6 +40,7 @@ jobs:
       environment-name: 'test'
       previous-environment-name: ''
       promotion-mode: environment-approval
+      trigger-branch: 'develop'
       github-context-json: ${{ toJSON(github) }}
       caller-inputs-json: ${{ toJSON(inputs) }}
       timeout-minutes: 360
