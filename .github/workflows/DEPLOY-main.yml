@@ -16,7 +16,7 @@ permissions:
 
 on:
   repository_dispatch:
-    types: ['alm4dataverse-build-deploy']
+    types: ['alm4dataverse-build-deploy-main']
   workflow_dispatch:
     inputs:
       build-run-name:
