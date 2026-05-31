@@ -12,7 +12,7 @@ on:
 
 jobs:
   import:
-    uses: rnwood/ALM4DataverseTest1Shared/.github/workflows/import.yml@main
+    uses: rnwood/ALM4DataverseTest2Shared/.github/workflows/import.yml@main
     with:
       timeout-minutes: 360
     permissions:

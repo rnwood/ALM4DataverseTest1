@@ -22,7 +22,7 @@ permissions:
 
 jobs:
   export:
-    uses: rnwood/ALM4DataverseTest1Shared/.github/workflows/export.yml@main
+    uses: rnwood/ALM4DataverseTest2Shared/.github/workflows/export.yml@main
     permissions:
       contents: write
       id-token: write

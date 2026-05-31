@@ -31,7 +31,7 @@ on:
 jobs:
   deploy-test:
     # First stage in the chain.
-    uses: rnwood/ALM4DataverseTest1Shared/.github/workflows/deploy.yml@main
+    uses: rnwood/ALM4DataverseTest2Shared/.github/workflows/deploy.yml@main
     permissions:
       actions: read
       contents: write
