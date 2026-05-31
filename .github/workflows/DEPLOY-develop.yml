@@ -7,7 +7,7 @@ run-name: ${{ github.event_name == 'workflow_dispatch' && format('Deploy {0} <- 
 #   1. Add it to workflow_dispatch target-environment options.
 #   2. Add a deploy-* job and chain needs to the previous stage.
 #   3. Set previous-environment-name to the previous stage short name.
-#   4. In environment-approval mode, keep the workflow_run trigger enabled.
+#   4. In environment-approval mode, keep the repository_dispatch trigger enabled.
 
 permissions:
   actions: read
@@ -15,10 +15,8 @@ permissions:
   id-token: write
 
 on:
-  workflow_run:
-    workflows: ['BUILD']
-    types: [completed]
-    branches: [ 'develop' ]
+  repository_dispatch:
+    types: ['alm4dataverse-build-deploy']
   workflow_dispatch:
     inputs:
       build-run-name:
